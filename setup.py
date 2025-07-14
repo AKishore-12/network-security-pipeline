@@ -7,7 +7,7 @@ def get_requirements():
             lines = file.readlines()
             for line in lines:
                 requirement = line.strip()
-                if requirement and requirement != '-e':
+                if requirement and requirement != '-e .':
                     requirement_lst.append(requirement)
         return requirement_lst
     except FileNotFoundError:
